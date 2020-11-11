@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <!--定义数据库名称。当你数据库的名字不是.db结尾,LitePal会自动加上后缀。-->
+    <dbname value="DbName" />
+
+    <!--数据库版本。每当对数据库中的表有所改动你就要升级你的数据库,把版本值+1 -->
+    <version value="1" />
+
+    <!--Lite将为每个类创建表。类中的成员变量将被映射到表中的列  -->
+    <list>
+        <mapping class="com.example.weather.Book" />
+    </list>
+
+    <!--
+        Java是一种区分大小写的语言,而数据库是不区分大小写。
+        定义的表和列的名称的时候。Lite默认会把所有类名和字段名变成小写.开发人员可以改变这种默认设置。
+        "keep" :将保持类中定义的。
+        "upper" :将把所有类名和字段名变成大写。
+        "lower" :使用默认值。
+        建议使用默认. -->
+    <cases value="keep" ></cases>
+
+    <!--
+       定义.db文件存储的地方。
+       "internal" 是指.db文件将存储在私有目录数据库文件夹下,没有人可以访问的内部存储。
+       "external" 是指.db文件将存在外部sd卡下/sdcard/Android/date/<package name>/files/databases,每个人都可以访问不安全。
+       默认值  "internal"。-->
+    <storage value="external" />
+</litepal>
