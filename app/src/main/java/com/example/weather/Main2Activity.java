@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.facebook.stetho.Stetho;
+
 import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
 import org.litepal.tablemanager.Connector;
@@ -19,6 +21,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Stetho.initializeWithDefaults(this);
         Log.d("msg", "我是一条信息");
         LitePal.initialize(this);
         Button btn1 = findViewById(R.id.create_database);
