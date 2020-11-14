@@ -2,7 +2,7 @@
 <litepal>
 
     <!--定义数据库名称。当你数据库的名字不是.db结尾,LitePal会自动加上后缀。-->
-    <dbname value="BookStore" />
+    <dbname value="BookStore3" />
 
     <!--数据库版本。每当对数据库中的表有所改动你就要升级你的数据库,把版本值+1 -->
     <version value="2" />

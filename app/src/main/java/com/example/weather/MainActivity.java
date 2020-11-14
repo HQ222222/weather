@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 book.setName("hq");
                 book.setAuthor("hqhq");
                 book.setPages(454);
-                book.setPrice(16.94);
+                book.setPrice(180.94);
                 book.setPress("Unknow");
                 book.save();
             }
@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 book.save();
                 book.setPrice(10.99);
                 book.save();*/
-                book.setPrice(14.95);
+                book.setPrice(14.95);//修改后的内容
                 book.setPress("Anchor");
-                book.updateAll("name=? and author=?","the lost Symbol","Dan Brown");
+                book.updateAll("name= ?","hq");//条件
 
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         deleteData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DataSupport.deleteAll(Book.class,"price<?","15");
+                DataSupport.deleteAll(Book.class,"price< ?","50");//条件
 
             }
         });
