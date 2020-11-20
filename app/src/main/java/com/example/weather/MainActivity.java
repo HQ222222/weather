@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         deleteData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LitePal.deleteAll(Book.class,"price< ?","50");//条件
+                /*LitePal.deleteAll(Book.class,"price< ?","50");//条件*/
 
 
             }
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         queryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<Book> books=LitePal.findAll(Book.class);
+               /* List<Book> books=LitePal.findAll(Book.class);
                 for (Book book: books){
                     Log.d("MainActivity","book name is "+book.getName());
                     Log.d("MainActivity","book author is "+book.getName());
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("MainActivity","book price is "+book.getPrice());
                     Log.d("MainActivity","book press is "+book.getPress());
 
-                }
+                }*/
             }
         });
 

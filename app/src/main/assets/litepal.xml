@@ -5,7 +5,7 @@
     <dbname value="BookStore3" />
 
     <!--数据库版本。每当对数据库中的表有所改动你就要升级你的数据库,把版本值+1 -->
-    <version value="2" />
+    <version value="4" />
 
     <!--Lite将为每个类创建表。类中的成员变量将被映射到表中的列  -->
     <list>
