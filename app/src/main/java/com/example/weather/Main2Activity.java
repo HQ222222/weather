@@ -37,16 +37,14 @@ public class Main2Activity extends AppCompatActivity {
         String inputText=load();
 
         Button saveData=findViewById(R.id.save_data);
-        saveData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        saveData.setOnClickListener(v ->{
                 SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
                 editor.putString("name","Tom");
                 editor.putInt("age",22);
                 editor.putBoolean("married",false);
                 editor.apply();
             }
-        });
+        );
 
 
 

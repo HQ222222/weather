@@ -11,6 +11,9 @@
     <list>
         <mapping class="com.example.weather.Book" />
         <mapping class="com.example.weather.Category" />
+        <mapping class="com.example.weather.db.city"/>
+        <mapping class="com.example.weather.db.county"/>
+        <mapping class="com.example.weather.db.province"/>
     </list>
 
     <!--

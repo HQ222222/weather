@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import org.litepal.LitePal;
-import org.litepal.crud.DataSupport;
+import org.litepal.crud.LitePalSupport;
 import org.litepal.tablemanager.Connector;
 
 import java.util.List;
@@ -71,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
         deleteData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DataSupport.deleteAll(Book.class,"price< ?","50");//条件
+                LitePal.deleteAll(Book.class,"price< ?","50");//条件
+
 
             }
         });
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         queryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<Book> books=DataSupport.findAll(Book.class);
+                List<Book> books=LitePal.findAll(Book.class);
                 for (Book book: books){
                     Log.d("MainActivity","book name is "+book.getName());
                     Log.d("MainActivity","book author is "+book.getName());
